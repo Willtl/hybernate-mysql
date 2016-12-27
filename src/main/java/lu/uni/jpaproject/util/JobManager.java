@@ -42,6 +42,13 @@ public class JobManager {
 	public List<Job> getJobs() {
 		return entityManager.createQuery("SELECT u FROM Job u").getResultList();
 	}
+	
+	public List<Job> getJobsCriteria() {
+		CriteriaBuilder critBuilder = entityManager.getCriteriaBuilder();
+		CriteriaQuery<Job> critQuery = critBuilder.createQuery(Job.class);
+		critQuery.from(Job.class);
+		return entityManager.createQuery(critQuery).getResultList();
+	}
 
 	// TODO
 	// replicate try-catch to other methods
@@ -57,15 +64,8 @@ public class JobManager {
 
 	public Job getJobByQuery(String query) {
 		return (Job) entityManager.createQuery(query).getResultList();
-	}
-
-	public List<Job> getJobsCriteria() {
-		CriteriaBuilder critBuilder = entityManager.getCriteriaBuilder();
-		CriteriaQuery<Job> critQuery = critBuilder.createQuery(Job.class);
-		critQuery.from(Job.class);
-		return entityManager.createQuery(critQuery).getResultList();
-	}
-
+	} 
+	
 	public void closeConnection() {
 		entityManager.close();
 	}

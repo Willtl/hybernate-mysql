@@ -10,7 +10,7 @@
 
 		<class>lu.uni.jpaproject.entities.Job</class>
 		<class>lu.uni.jpaproject.entities.Operation</class>
-		
+
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
 			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/java_backend" />
@@ -22,7 +22,7 @@
 			<property name="hibernate.format_sql" value="true" />
 
 			<!-- atualiza o banco, gera as tabelas se for preciso 
-			<property name="hibernate.hbm2ddl.auto" value="update" /> -->  
+			<property name="hibernate.hbm2ddl.auto" value="create" /> -->
 		</properties>
 	</persistence-unit>
 
