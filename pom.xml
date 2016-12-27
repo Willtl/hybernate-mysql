@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>lu.uni.jpaproject</groupId>
-	<artifactId>jpahelloworld</artifactId>
+	<artifactId>JPASample</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>jpahelloworld</name>
+	<name>JPASample</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -37,6 +37,12 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
+			<version>5.2.4.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
 			<version>5.2.4.Final</version>
 		</dependency>
 

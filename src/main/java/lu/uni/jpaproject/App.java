@@ -44,11 +44,11 @@ public class App {
 		}
 		System.out.println("Size: " + userList.size());
 
-		Job j = manager.getJob(1);
+		/*Job j = manager.getJob(1);
 		if (j != null){
 			System.out.println(j.getDescription());
 			manager.deleteJob(j);
-		}
+		}*/
 					
 		manager.closeConnection();
 	}
